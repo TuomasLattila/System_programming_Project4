@@ -42,6 +42,17 @@ sys_getpid(void)
   return myproc()->pid;
 }
 
+int //new
+sys_getreadcount(void) //returns the count of read() syscalls
+{
+  int reset;
+  argint(0, &reset); //fetch the argument
+  if (reset == 1) { 
+    readCount = 0; // if given argument 1, reset counter
+  }
+  return readCount;
+}
+
 int
 sys_sbrk(void)
 {

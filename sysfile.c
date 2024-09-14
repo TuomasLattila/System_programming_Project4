@@ -69,6 +69,7 @@ sys_dup(void)
 int
 sys_read(void)
 {
+  readCount++; //increment the counter
   struct file *f;
   int n;
   char *p;
