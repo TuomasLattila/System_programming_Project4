@@ -1,1 +1,0 @@
-I added a utility called printCount which prints the count of how many times has the read() system call been called after booting the xv6 kernel. When called it prints the count, and when user adds “reset” as an argument, the counter resets to 0.
